@@ -29,11 +29,11 @@ function App() {
     formData.append('file', file);
 
     const API = process.env.REACT_APP_BACKEND_URL;
-const response = await fetch(new URL("/upload", API).toString(), {
-  method: "POST",
-  body: formData,
-});
-
+    try {
+      const response = await fetch(new URL("/upload", API).toString(), {
+        method: "POST",
+        body: formData,
+      });
 
       const data = await response.json();
 
