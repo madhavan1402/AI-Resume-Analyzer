@@ -17,7 +17,8 @@ public class CorsConfig {
                         .allowedOrigins(
                                 "http://localhost:3000",
                                 "https://ai-resume-analyzer-dusky-nine.vercel.app",
-                                "https://ai-resume-analyzer-eix3ec8yv-madhavans-projects-a641427d.vercel.app"
+                                "https://ai-resume-analyzer-eix3ec8yv-madhavans-projects-a641427d.vercel.app",
+                                "https://ai-resume-analyzer-dxb30h8fu-madhavans-projects-a641427d.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
