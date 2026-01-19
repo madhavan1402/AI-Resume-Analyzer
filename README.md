@@ -175,15 +175,13 @@ AI-Resume-Analyzer/
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](<img width="672" height="340" alt="Screenshot 2026-01-19 190953" src="https://github.com/user-attachments/assets/5c27c621-19cc-47aa-8a09-3fa63423d712" />
+)
 *Update this with actual screenshot path*
 
 ### Analysis Results
-![Results](screenshots/results.png)
-*Update this with actual screenshot path*
-
-### Upload Interface
-![Upload](screenshots/upload.png)
+![Results](<img width="943" height="598" alt="Screenshot 2026-01-12 214114" src="https://github.com/user-attachments/assets/334069e0-4e29-4e62-91f8-37be5e17684f" />
+)
 *Update this with actual screenshot path*
 
 ## Roadmap
