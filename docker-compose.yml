@@ -1,0 +1,21 @@
+services:
+  resume-ml-api:
+    image: resume-ml-api
+    container_name: resume-ml-api
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_RUN_HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  resume-backend:
+    image: resume-backend
+    container_name: resume-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - resume-ml-api
