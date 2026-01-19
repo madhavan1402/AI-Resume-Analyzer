@@ -29,7 +29,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/upload`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}`, {
         method: 'POST',
         body: formData,
       });
