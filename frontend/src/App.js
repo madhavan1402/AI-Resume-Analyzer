@@ -29,25 +29,28 @@ function App() {
     formData.append('file', file);
 
     const API = process.env.REACT_APP_BACKEND_URL;
+
+    if (!API) {
+      setError("Backend URL not configured.");
+      setLoading(false);
+      return;
+    }
+    
     try {
-      const response = await fetch(new URL("/upload", API).toString(), {
+      const response = await fetch(`${API}/upload`, {
         method: "POST",
         body: formData,
       });
-
+    
       const data = await response.json();
-
+    
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to upload file. Please try again.');
+        throw new Error(data.error || "Failed to upload file.");
       }
-
-      if (data.error) {
-        throw new Error(data.error);
-      }
-
+    
       setResult(data);
     } catch (err) {
-      setError(err.message);
+      setError(err.message || "Something went wrong.");
     } finally {
       setLoading(false);
     }
