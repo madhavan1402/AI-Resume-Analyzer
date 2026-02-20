@@ -16,10 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.maddy.backend.service.ResumeService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins = {
-    "http://localhost:3000",
-    "https://ai-resume-analyzer-dusky-nine.vercel.app"
-})
+@CrossOrigin(origins = "*")
 
 @RestController
 public class ResumeController {
