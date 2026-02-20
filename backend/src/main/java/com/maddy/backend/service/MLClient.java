@@ -7,14 +7,18 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
+
 @Service
 public class MLClient {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
+    @Value("${ml.api.url}")
+    private String mlApiUrl;
+
     public String analyzeResume(String text) {
 
-        String url = "http://localhost:5000/analyze";
+        String url = mlApiUrl;
 
         Map<String, String> body = new HashMap<>();
         body.put("text", text);
