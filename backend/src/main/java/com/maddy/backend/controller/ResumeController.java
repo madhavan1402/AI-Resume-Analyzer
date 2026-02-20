@@ -43,6 +43,10 @@ public class ResumeController {
 					.body("{\"error\": \"Unexpected error\"}");
 		}
 	}
+	@GetMapping("/")
+	public String home() {
+	    return "Backend Running 🚀";
+	}
 
 
 
