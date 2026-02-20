@@ -28,7 +28,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', file);
 
-    const API = process.env.REACT_APP_BACKEND_URL;
+    const API = "https://ai-resume-analyzer-production-533b.up.railway.app";
 
     if (!API) {
       setError("Backend URL not configured.");
